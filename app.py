@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABSE_URI'] = 'sqlite:///tasks.db' # three forward slashes is a relative path and four is for absolute path
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tasks.db' # three forward slashes is a relative path and four is for absolute path
 db = SQLAlchemy(app)
 
 
