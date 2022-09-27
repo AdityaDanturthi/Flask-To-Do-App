@@ -11,7 +11,10 @@ db = SQLAlchemy(app)
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key =True)
     task = db.Column(db.String(200), nullable = False)
-    dateCreated = dc.Column(db.DateTime, default = datetime.utcnow)
+    dateCreated = db.Column(db.DateTime, default = datetime.utcnow)
+
+def __repr__(self):
+    return '<Task %r>' % self.id
 
 @app.route('/')
 def index():
